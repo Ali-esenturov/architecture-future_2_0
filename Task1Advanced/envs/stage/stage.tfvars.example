@@ -1,0 +1,23 @@
+# Staging environment — production-like resources, NAT enabled for external access
+# Copy this file to stage.tfvars and fill in your values
+folder_id          = "REPLACE_WITH_YOUR_FOLDER_ID"
+zone               = "ru-central1-b"
+subnet_id          = "REPLACE_WITH_YOUR_SUBNET_ID"
+ssh_public_key     = "REPLACE_WITH_YOUR_SSH_PUBLIC_KEY"
+
+vm_name            = "future20-stage"
+cores              = 2
+memory             = 8
+core_fraction      = 50
+boot_disk_image_id = "fd8vmcue7aajpmeo39kk" # Ubuntu 22.04 LTS
+boot_disk_size     = 30
+disk_size          = 50
+disk_type          = "network-ssd"
+vm_user            = "ubuntu"
+nat                = true
+
+labels = {
+  env     = "stage"
+  project = "future20"
+  team    = "platform"
+}
