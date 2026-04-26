@@ -104,63 +104,8 @@
 
 ---
 
-## Схема bounded contexts и интеграций
+## Схема bounded contexts и интеграций в файле bounded-contexts.drawio
 
-```mermaid
-graph TB
-    classDef core fill:#1168BD,color:#fff,stroke:#0E5A9E
-    classDef support fill:#666,color:#fff,stroke:#444
-    classDef acl fill:#e8a230,color:#000,stroke:#c8821a
-    classDef generic fill:#2d9e2d,color:#fff,stroke:#1d7a1d
-    classDef kafka fill:#111,color:#fff,stroke:#555
-    classDef external fill:#993300,color:#fff,stroke:#771100
-    classDef transitional fill:#cc4444,color:#fff,stroke:#992222,stroke-dasharray:5 5
-
-    KAFKA[["⚡ Apache Kafka\n+ Schema Registry\n[Event Bus]"]]:::kafka
-
-    CLINIC["Clinic\n[Core Domain]\nPatient · Appointment\nMedicalVisit · MedicalRecord"]:::core
-    LAB["Laboratory\n[Core Domain]\nLabOrder · LabResult"]:::core
-    PHARMACY["Pharmacy\n[Core Domain]\nPrescription · PharmacyOrder"]:::core
-    FINTECH["Fintech\n[Core Domain]\nAccount · Transaction\nCreditContract"]:::core
-
-    PARTNER["Partner Integration\n[ACL — Supporting]\nPartner · DeviceTelemetry"]:::acl
-    LEGACY["Legacy Adapter\n[ACL — Transitional]\nESB/DWH Bridge"]:::transitional
-
-    ANALYTICS["Analytics Platform\n[Generic — Conformist]\nDataProduct · Report"]:::generic
-    REGULATORY["Regulatory Reporting\n[Supporting — Conformist]\nRegulatoryReport"]:::support
-    IAM["Identity & Access\n[Generic — Shared Kernel]\nUser · Role"]:::generic
-
-    EXT_LAB["Лабораторные\nсистемы"]:::external
-    EXT_BANK["Банковские сети\nSWIFT · МИР · ЦБ РФ"]:::external
-    EXT_PHARMA["Фарм. партнёры"]:::external
-    EXT_DEVICES["Медоборудование"]:::external
-    EXT_REG["Регуляторы\nФНС · ФОМС\nРосздравнадзор"]:::external
-
-    CLINIC -- "PatientRegistered\nVisitCompleted\nPrescriptionIssued\nDiagnosisSet" --> KAFKA
-    LAB -- "LabResultReady\nSampleReceived" --> KAFKA
-    PHARMACY -- "PrescriptionFulfilled\nDrugBackOrdered" --> KAFKA
-    FINTECH -- "PaymentProcessed\nPaymentFailed\nCreditContractSigned" --> KAFKA
-    PARTNER -- "TelemetryReceived\nPharmaCatalogUpdated\nPartnerConnected" --> KAFKA
-    LEGACY -- "LegacyEventMigrated" --> KAFKA
-
-    KAFKA -- "LabOrderCreated" --> LAB
-    KAFKA -- "PrescriptionIssued" --> PHARMACY
-    KAFKA -- "PaymentRequested" --> FINTECH
-    KAFKA -- "PartnerOrderPlaced" --> PARTNER
-    KAFKA -- "все события" --> ANALYTICS
-    KAFKA -- "PaymentProcessed\nVisitCompleted\nLabResultReady" --> REGULATORY
-
-    IAM -. "JWT / Auth\n[Shared Kernel]" .-> CLINIC
-    IAM -. "JWT / Auth\n[Shared Kernel]" .-> FINTECH
-    IAM -. "JWT / Auth\n[Shared Kernel]" .-> ANALYTICS
-
-    EXT_LAB --> PARTNER
-    EXT_DEVICES --> PARTNER
-    EXT_PHARMA --> PARTNER
-    FINTECH --> EXT_BANK
-    REGULATORY --> EXT_REG
-    LEGACY -. "ESB (Apache Camel)\n[Выводится из эксплуатации]" .-> CLINIC
-```
 
 ---
 
