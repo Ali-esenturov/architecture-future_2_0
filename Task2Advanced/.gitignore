@@ -1,0 +1,8 @@
+# Terraform working directories and state
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+
+# Plan artifacts (generated at runtime, not for VCS)
+tfplan
