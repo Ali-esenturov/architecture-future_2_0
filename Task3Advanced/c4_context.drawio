@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="c4-context" name="C4 System Context">
+    <mxGraphModel dx="1548" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="&lt;b style=&quot;font-size:16px&quot;&gt;Будущее 2.0 — Системный контекст (C4)&lt;/b&gt;&lt;br&gt;Целевая архитектура: горизонт 3 года" vertex="1">
+          <mxGeometry height="50" width="1000" x="327" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="shape=mxgraph.c4.person2;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;whiteSpace=wrap;html=1;" value="&lt;b&gt;Врач / Оператор клиники&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Ведёт приём пациентов, записывает диагнозы и назначения" vertex="1">
+          <mxGeometry height="140" width="160" x="30" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="shape=mxgraph.c4.person2;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;whiteSpace=wrap;html=1;" value="&lt;b&gt;Бизнес-аналитик&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Строит отчёты и дашборды через портал самообслуживания" vertex="1">
+          <mxGeometry height="140" width="160" x="160" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="shape=mxgraph.c4.person2;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;whiteSpace=wrap;html=1;" value="&lt;b&gt;Клиент финтех&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Использует банковские и финансовые сервисы экосистемы" vertex="1">
+          <mxGeometry height="140" width="160" x="980" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="shape=mxgraph.c4.person2;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;whiteSpace=wrap;html=1;" value="&lt;b&gt;Партнёр&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Фарм. компания или производитель медицинского оборудования" vertex="1">
+          <mxGeometry height="140" width="160" x="1190" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5A9E;fontColor=#ffffff;arcSize=3;fontSize=12;" value="&lt;b&gt;Будущее 2.0&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Медицинско-финтех экосистема. Событийная архитектура. Предоставляет медицинские, аналитические и финансовые сервисы через независимые домены." vertex="1">
+          <mxGeometry height="160" width="400" x="477" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;arcSize=3;fontSize=11;" value="&lt;b&gt;Лабораторные системы&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;Результаты анализов и диагностических исследований" vertex="1">
+          <mxGeometry height="110" width="195" x="40" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;arcSize=3;fontSize=11;" value="&lt;b&gt;Банковские сети&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;SWIFT, ЦБ РФ, МИР, платёжные системы" vertex="1">
+          <mxGeometry height="110" width="195" x="265" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;arcSize=3;fontSize=11;" value="&lt;b&gt;Регуляторы&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;ФНС, ЦБ РФ, Росздравнадзор, ФОМС" vertex="1">
+          <mxGeometry height="110" width="195" x="490" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;arcSize=3;fontSize=11;" value="&lt;b&gt;Фарм. партнёры&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;Каталоги препаратов, заказы, поставки" vertex="1">
+          <mxGeometry height="110" width="195" x="770" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;arcSize=3;fontSize=11;" value="&lt;b&gt;Произв. медоборудования&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;Телеметрия устройств, сервисные данные" vertex="1">
+          <mxGeometry height="110" width="210" x="1090" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;fontSize=10;" target="sys" value="Работает с данными пациентов [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;fontSize=10;" target="sys" value="Строит отчёты самообслуживания [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;fontSize=10;" target="sys" value="Использует финтех-сервисы [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;fontSize=10;" target="sys" value="Интегрирован через Partner API [REST / Events]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;fontSize=10;" target="e1" value="Получает результаты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;fontSize=10;" target="e2" value="Платёжные операции">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;fontSize=10;" target="e3" value="Регуляторная отчётность [HTTPS / SFTP]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="588" y="580" />
+              <mxPoint x="588" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;fontSize=10;" target="e4" value="Заказы и каталоги [REST API / Events]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="640" />
+              <mxPoint x="840" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r9" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;rounded=0;fontSize=10;" target="e5" value="Телеметрия устройств [MQTT / Events]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

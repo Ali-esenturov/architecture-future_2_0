@@ -1,0 +1,10 @@
+# Sensitive variable files — use *.tfvars.example as templates
+*.tfvars
+
+# Terraform state (contains real resource IDs and may contain secrets)
+*.tfstate
+*.tfstate.backup
+
+# Terraform working directories
+.terraform/
+.terraform.lock.hcl
